@@ -52,11 +52,13 @@ public class DFS {
 	}
 
 	public static void main(String[] args) {
-		// Below is the graph
-		// 0--1--3
-		// | / /
-		// |//
-		// 2
+		
+		//   Below is the graph
+		//   0--1--3
+		//   | / /
+		//   |//
+		//   2
+		
 		DFS g = new DFS(4);
 
 		g.addEdge(0, 1);
@@ -64,11 +66,11 @@ public class DFS {
 		g.addEdge(1, 2);
 		g.addEdge(1, 3);
 		g.addEdge(1, 0);
-		g.addEdge(3, 1);
 		g.addEdge(2, 0);
 		g.addEdge(2, 3);
 		g.addEdge(2, 1);
 		g.addEdge(3, 2);
+		g.addEdge(3, 1);
 
 		System.out.println("Following is Depth First Traversal with Edge count");
 
