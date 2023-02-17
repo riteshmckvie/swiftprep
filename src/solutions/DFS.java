@@ -30,8 +30,8 @@ public class DFS {
           
         while(!stack.isEmpty()) 
         { 
-            v = stack.peek(); 
-            stack.pop(); 
+            //v = stack.peek(); 
+            v = stack.pop(); 
               
             if(visited.get(v) == false) 
             { 

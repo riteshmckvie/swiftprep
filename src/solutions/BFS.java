@@ -41,14 +41,24 @@ public class BFS {
 	}
 
 	public static void main(String args[]) {
-		BFS g = new BFS(4);
+		BFS g = new BFS(6);
 
+		//   Below is the graph
+		//   0--1--3--4
+		//   | / /
+		//   |//
+		//   2--5
+		
 		g.addEdge(0, 1);
 		g.addEdge(0, 2);
 		g.addEdge(1, 2);
 		g.addEdge(2, 0);
 		g.addEdge(2, 3);
 		g.addEdge(3, 3);
+		g.addEdge(3, 4);
+		g.addEdge(2, 5);
+
+
 
 		System.out.println("Following is Breadth First Traversal ");
 		g.BreadthFastSearch(2);
