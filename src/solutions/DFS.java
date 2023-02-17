@@ -6,11 +6,11 @@ import java.util.Vector;
 
 public class DFS {
 
-	private int verticesNo;
+	private Integer verticesNo;
 	
 	private LinkedList<Integer> adj[];
 
-	DFS(int v) {
+	DFS(Integer v) {
 		this.verticesNo = v;
 		adj = new LinkedList[v];
 		for (int i = 0; i < v; ++i) {
@@ -52,6 +52,11 @@ public class DFS {
 	}
 
 	public static void main(String[] args) {
+		// Below is the graph
+		// 0--1--3
+		// | / /
+		// |//
+		// 2
 		DFS g = new DFS(4);
 
 		g.addEdge(0, 1);
