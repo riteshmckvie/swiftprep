@@ -16,12 +16,12 @@ import java.util.stream.Collectors;
 public class Test {
 	
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
-        LinkedList list = new  LinkedList<>();
+        LinkedList<Integer> list = new  LinkedList<>();
         list.add(new Integer(2));
         list.add(new Integer(8));
         list.add(new Integer(5));
         list.add(new Integer(1));
-        Iterator i = list.iterator();
+        Iterator<Integer> i = list.iterator();
         Collections.reverse(list);
         Collections.sort(list);
         while(i.hasNext()) {
@@ -46,7 +46,7 @@ public class Test {
           System.out.println("I'm Callable task.");
             return 1 + 1;
       });
-		Callable c = () -> {
+		Callable<Integer> c = () -> {
 	          System.out.println("I'm Callable task.");
 	            return 1 + 1;
 	      };
