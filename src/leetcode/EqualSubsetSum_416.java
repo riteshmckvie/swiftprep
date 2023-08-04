@@ -1,13 +1,28 @@
-package dp;
+package leetcode;
 
-public class TargetSum {
+public class EqualSubsetSum_416 {
 
-	// Returns true if there is a subset of
+	public static void main(String[] args) {
+		int[] arr = new int[] { 1, 5, 11, 5 };
+		canPartition(arr);
+	}
+
+	static boolean canPartition(int[] nums) {
+		int length = nums.length;
+		int sum = 0;
+		if (length == 0)
+			return false;
+		for (int i = 0; i < length; i++) {
+			sum = sum + nums[i];
+		}
+		if (sum % 2 != 0)	
+			return false;
+
+		return isSubsetSum(nums, length, sum/2);
+	}
+	
 	// set[] with sum equal to given sum
 	public static boolean isSubsetSum(int set[], int n, int sum) {
-		// The value of subset[i][j] will be
-		// true if there is a subset of
-		// set[0..j-1] with sum equal to i
 		boolean subset[][] = new boolean[sum + 1][n + 1];
 
 		// If sum is 0, then answer is true
@@ -30,16 +45,5 @@ public class TargetSum {
 		}
 
 		return subset[sum][n];
-	}
-
-	// Driver code
-	public static void main(String args[]) {
-		int set[] = { 3, 34, 4, 12, 5, 2 };
-		int sum = 10;
-		int n = set.length;
-		if (isSubsetSum(set, n, sum) == true)
-			System.out.println("Found a subset" + " with given sum");
-		else
-			System.out.println("No subset with" + " given sum");
 	}
 }
