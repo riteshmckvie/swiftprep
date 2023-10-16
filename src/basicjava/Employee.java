@@ -33,7 +33,7 @@ public final class Employee {
 	}
 
 	public HashMap<String,Integer> getHashmap() {
-		return (HashMap<String,Integer>) hashmap.clone();
+		return  (HashMap<String, Integer>) hashmap.clone();
 	}
 
 }
