@@ -1,6 +1,6 @@
 package dp;
 
-public class TargetSum {
+public class SubsetSum {
 
 	// Returns true if there is a subset of
 	// set[] with sum equal to given sum
@@ -34,8 +34,8 @@ public class TargetSum {
 
 	// Driver code
 	public static void main(String args[]) {
-		int set[] = { 3, 34, 4, 12, 5, 2 };
-		int sum = 10;
+		int set[] = { 1,3,5,2,4 };
+		int sum = 6;
 		int n = set.length;
 		if (isSubsetSum(set, n, sum) == true)
 			System.out.println("Found a subset" + " with given sum");
