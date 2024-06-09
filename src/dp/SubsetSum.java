@@ -34,8 +34,8 @@ public class SubsetSum {
 
 	// Driver code
 	public static void main(String args[]) {
-		int set[] = { 1,3,5,2,4 };
-		int sum = 6;
+		int set[] = { 2,3,5,6,8,10 };
+		int sum = 10;
 		int n = set.length;
 		if (isSubsetSum(set, n, sum) == true)
 			System.out.println("Found a subset" + " with given sum");
