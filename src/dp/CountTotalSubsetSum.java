@@ -17,6 +17,7 @@ public class CountTotalSubsetSum {
 	}
 
 	public static int perfectSum(Integer a[], int n, int sum) {
+		if(sum == -1) sum = 1;
 		int dp[][] = new int[n + 1][sum + 1];
 
 		// Initializing the first value of matrix
